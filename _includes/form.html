@@ -1,0 +1,52 @@
+<form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="{{ site.web3forms_key }}">
+  <input type="hidden" name="subject" id="form-subject" value="Solera Polo enquiry">
+  <input type="hidden" name="from_name" value="solerapolo.com">
+  <input type="hidden" name="redirect" value="{{ site.url }}/thank-you/">
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <div class="field">
+    <label for="f-name">Name</label>
+    <input id="f-name" name="name" type="text" autocomplete="name" required>
+  </div>
+  <div class="field">
+    <label for="f-email">Email</label>
+    <input id="f-email" name="email" type="email" autocomplete="email" required>
+  </div>
+  <div class="field">
+    <label for="f-phone">WhatsApp or phone <span class="optional">optional</span></label>
+    <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+  </div>
+  <div class="field">
+    <label for="f-topic">I am interested in</label>
+    <select id="f-topic" name="topic" required>
+      <option value="" selected>Choose one</option>
+      {% for t in site.data.topics %}<option value="{{ t.key }}">{{ t.label }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="field">
+    <label for="f-lang">Preferred language <span class="optional">optional</span></label>
+    <select id="f-lang" name="language">
+      <option value="">No preference</option>
+      <option value="English">English</option>
+      <option value="Español">Español</option>
+      <option value="Deutsch">Deutsch</option>
+      <option value="Français">Français</option>
+      <option value="Русский">Русский</option>
+      <option value="Magyar">Magyar</option>
+    </select>
+  </div>
+  <div class="field field-wide">
+    <label for="f-message">Message</label>
+    <textarea id="f-message" name="message" rows="6" required></textarea>
+  </div>
+  <div class="field field-wide field-consent">
+    <input id="f-consent" name="consent" type="checkbox" value="yes" required>
+    <label for="f-consent">I agree that Solera Polo may use these details to answer my enquiry, as described in the <a href="/privacy/">privacy notice</a>.</label>
+  </div>
+  <div class="field field-wide">
+    <button class="button" type="submit">Send</button>
+    <p class="form-aside">We read every message ourselves and usually answer within two days. In a hurry? <a href="{{ site.whatsapp_link }}">WhatsApp us</a>.</p>
+  </div>
+</form>

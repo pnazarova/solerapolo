@@ -1,0 +1,11 @@
+<div class="prices" id="prices">
+  <dl class="prices-grid">
+    {% for item in site.data.prices.items %}<div class="price">
+      <dt>{{ item.name }}</dt>
+      <dd class="price-value">{{ item.price | remove: " €" }}<span class="cur">€</span></dd>
+      <dd class="price-note">{{ item.note }}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+  <p class="prices-conditions">{{ site.data.prices.conditions }}</p>
+</div>

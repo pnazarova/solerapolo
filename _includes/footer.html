@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <p class="footer-brand">{% include wordmark.html %}</p>
+      <p>{{ site.location }}<br>Europe and Argentina</p>
+    </div>
+    <div class="footer-col">
+      <a class="footer-link" href="mailto:{{ site.email }}">{% include icon-email.svg %}<span>{{ site.email }}</span></a>
+      <a class="footer-link" href="{{ site.whatsapp_link }}">{% include icon-whatsapp.svg %}<span>{{ site.whatsapp_number }}</span></a>
+      <a class="footer-link" href="{{ site.instagram_url }}">{% include icon-instagram.svg %}<span>@{{ site.instagram }}</span></a>
+    </div>
+    <div class="footer-col footer-nav">
+      {% for item in site.data.nav.all %}<a href="{{ item.url }}">{{ item.title }}</a>
+      {% endfor %}
+      <a href="/privacy/">Privacy</a>
+    </div>
+  </div>
+  <p class="footer-legal">© {{ site.year }} Solera Polo. {{ site.tagline }}.</p>
+</footer>

@@ -1,0 +1,30 @@
+<header class="site-header{% if page.hero %} over-hero{% endif %}" id="site-header">
+  <div class="header-inner">
+    <nav class="nav nav-left" aria-label="Primary">
+      {% for item in site.data.nav.left %}<a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    <a class="brand" href="/" aria-label="Solera Polo, home">{% include wordmark.html %}</a>
+    <nav class="nav nav-right" aria-label="Secondary">
+      {% for item in site.data.nav.right %}<a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+      <a class="nav-cta" href="{{ site.data.nav.cta.url }}"{% if page.url == site.data.nav.cta.url %} aria-current="page"{% endif %}>{{ site.data.nav.cta.title }}</a>
+    </nav>
+    <div class="header-mobile">
+      <a class="icon-link" href="{{ site.whatsapp_link }}" aria-label="WhatsApp Solera Polo">{% include icon-whatsapp.svg %}</a>
+      <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-lines" aria-hidden="true"><i></i><i></i></span><span class="menu-label">Menu</span></button>
+    </div>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <nav class="menu-nav" aria-label="Menu">
+      {% for item in site.data.nav.all %}<a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    <div class="menu-actions">
+      <a class="link" href="/contact/?topic=lessons">Book a lesson</a>
+      <a class="link" href="/contact/?topic=quote">Get a quote</a>
+      <a class="link" href="{{ site.whatsapp_link }}">WhatsApp</a>
+    </div>
+    <div class="menu-mallet">{% include mallet.svg %}</div>
+  </div>
+</header>
