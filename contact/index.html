@@ -1,0 +1,56 @@
+---
+layout: default
+title: Get in touch
+og_title: Contact · Solera Polo
+description: Contact Solera Polo in Sotogrande for polo lessons, horse rental, pro hire, team building, polo holidays, horses for sale and corporate days. Email, WhatsApp or the form. We answer in six languages.
+no_band: true
+---
+<section class="page-intro">
+  <div class="container">
+    <p class="eyebrow">Contact</p>
+    <h1 class="h-display">Let's talk polo.</h1>
+    <p class="lede">Tell us what you have in mind and Polina or Luis will answer, in English, Spanish, German, French, Russian or Hungarian.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+    <div>
+      {% if site.web3forms_key contains "PASTE" %}
+      <div class="form-pending">
+        <p class="eyebrow">Contact form</p>
+        <p>The form is being connected. Until then, write to <a class="text-link" href="mailto:{{ site.email }}">{{ site.email }}</a> or <a class="text-link" href="{{ site.whatsapp_link }}">WhatsApp {{ site.whatsapp_number }}</a> and tell us what you have in mind.</p>
+      </div>
+      {% else %}
+      {% include form.html %}
+      {% endif %}
+    </div>
+    <aside>
+      <div class="aside-block">
+        <h3>Faster</h3>
+        <p><a href="{{ site.whatsapp_link }}">{% include icon-whatsapp.svg %}<span>WhatsApp {{ site.whatsapp_number }}</span></a></p>
+        <p><a href="mailto:{{ site.email }}">{% include icon-email.svg %}<span>{{ site.email }}</span></a></p>
+        <p><a href="{{ site.instagram_url }}">{% include icon-instagram.svg %}<span>@{{ site.instagram }}</span></a></p>
+      </div>
+      <div class="aside-block">
+        <h3>Where and when</h3>
+        <p>Sotogrande, Spain, March to November.</p>
+        <p>Pilar and Río Cuarto, Argentina, November to March.</p>
+        <p>Tournaments anywhere in the world, all year.</p>
+      </div>
+      <div class="aside-block">
+        <h3>Horse rental prices</h3>
+        <div class="prices compact">
+          <dl class="prices-grid">
+            {% for item in site.data.prices.items %}<div class="price">
+              <dt>{{ item.name }}</dt>
+              <dd class="price-value">{{ item.price | remove: " €" }}<span class="cur">€</span></dd>
+            </div>
+            {% endfor %}
+          </dl>
+          <p class="prices-conditions">{{ site.data.prices.conditions }}</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
