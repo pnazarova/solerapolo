@@ -1,0 +1,30 @@
+# Solera Polo, solerapolo.com
+# Built with Jekyll on GitHub Pages. Edit text in the page files, prices in _data/prices.yml.
+
+title: Solera Polo
+tagline: The personal side of polo
+description: Boutique polo services in Sotogrande and Argentina by Luis Benmergui and Polina Nazarova. Polo lessons, match ready horses per chukker, pro hire, team building, corporate days and horses for sale.
+url: https://solerapolo.com
+lang: en
+year: 2026
+
+# Contact
+email: info@solerapolo.com
+whatsapp_number: "+54 9 3584 26 8818"
+whatsapp_link: https://wa.me/5493584268818
+instagram: criasolera
+instagram_url: https://instagram.com/criasolera
+location: Sotogrande, Spain
+
+# Contact form. Paste the Web3Forms access key for info@solerapolo.com between the quotes.
+web3forms_key: "PASTE_WEB3FORMS_KEY_HERE"
+
+# Jekyll
+permalink: pretty
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - build.py
+  - node_modules
+  - vendor
