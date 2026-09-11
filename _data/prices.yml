@@ -1,0 +1,18 @@
+# Horse rental prices, Sotogrande 2026. Shown on Services, Horses and Contact.
+# Change a number here and every page updates. Keep the euro sign after the number.
+
+conditions: "Prices for Sotogrande, 2026. Per horse. VAT excluded. Green fee excluded. Season and tournament packages on request."
+
+items:
+  - name: Stick and ball
+    price: "150 €"
+    note: Horse rental for a stick and ball session
+  - name: Polo lesson with horse
+    price: "200 €"
+    note: Private lesson, horse included
+  - name: Club chukker
+    price: "250 €"
+    note: Horse rental for club chukkers
+  - name: Tournament chukker
+    price: "from 300 €"
+    note: Horse rental for tournament chukkers

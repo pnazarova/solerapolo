@@ -1,0 +1,30 @@
+# Navigation. The desktop header shows "left" items, then the wordmark, then "right" items and the call to action.
+# The phone menu shows "all".
+
+left:
+  - title: About
+    url: /about/
+  - title: Services
+    url: /services/
+  - title: Horses
+    url: /horses/
+
+right:
+  - title: Corporate
+    url: /corporate/
+
+cta:
+  title: Get in touch
+  url: /contact/
+
+all:
+  - title: About
+    url: /about/
+  - title: Services
+    url: /services/
+  - title: Horses
+    url: /horses/
+  - title: Corporate
+    url: /corporate/
+  - title: Contact
+    url: /contact/

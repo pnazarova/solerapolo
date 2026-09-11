@@ -1,0 +1,19 @@
+# Options for "I am interested in" on the contact form.
+# The "key" is what a link passes in the address, e.g. /contact/?topic=lessons
+
+- key: lessons
+  label: Polo lessons and coaching
+- key: rental
+  label: Horse rental
+- key: pro-hire
+  label: Pro hire
+- key: team-building
+  label: Team building
+- key: experiences
+  label: Polo experiences and holidays
+- key: horses-for-sale
+  label: Horses for sale
+- key: corporate
+  label: Corporate and leadership days
+- key: quote
+  label: A quote for something else
